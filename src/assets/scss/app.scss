@@ -1,0 +1,15 @@
+@import './partials/_normalize.scss';
+@import './partials/_variables.scss';
+@import './partials/_mixins.scss';
+@import './partials/_common.scss';
+@import './partials/_header.scss';
+@import './partials/_footer.scss';
+@import './partials/_content.scss';
+
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}

@@ -1,0 +1,6 @@
+nav {
+  height: 60px;
+  width: 100%;
+  background: pink;
+  @include flex_cen;
+}
