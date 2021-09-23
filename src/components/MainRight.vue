@@ -1,18 +1,18 @@
 <template>
   <div class="main_right">
-    <Profiles />
+    <Usprof />
     <Suggested />
     <Footer />
   </div>
 </template>
 <script>
-import Profiles from './Profiles.vue'
+import Usprof from './Usprof.vue'
 import Suggested from './Suggested.vue'
 import Footer from './Footer.vue'
 export default {
   name: 'MainRight',
   components: {
-    Profiles,
+    Usprof,
     Suggested,
     Footer,
   },

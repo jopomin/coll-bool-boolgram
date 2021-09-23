@@ -3,11 +3,11 @@
     <div class="post_head">
       <div class="post_head_info">
         <div class="post_head_pic">
-          <img src="../assets/img/profile.jpg" alt="" />
+          <img :src="userPic" :alt="userNick" />
         </div>
         <div class="post_head_text">
-          <h5 class="post_head_prof">Username</h5>
-          <p class="post_head_location">Luogo, Paese</p>
+          <h5 class="post_head_prof">{{ userNick }}</h5>
+          <p class="post_head_location">{{ userFullName }}e</p>
         </div>
       </div>
       <div class="post_head_settings">
@@ -15,7 +15,7 @@
       </div>
     </div>
     <div class="post_pic">
-      <img src="../assets/img/landscape.png" alt="" />
+      <img :src="postPic" :alt="'Pic of ' + userNick" />
     </div>
     <div class="post_main">
       <div class="post_actions">
@@ -38,33 +38,34 @@
       </div>
       <div class="post_likes">
         <div class="post_likes_pic">
-          <img src="../assets/img/profile.jpg" alt="" />
+          <img :src="firstLikePic" :alt="firstLikeName" />
         </div>
         <p class="post_likes_text">
-          Piace a <strong>Gigino</strong> e ad altri
-          <strong>103.245</strong> utenti
+          Piace a <strong>{{ firstLikeName }}</strong> e
+          <strong>altri {{ postLikes }}</strong>
         </p>
       </div>
       <div class="post_caption">
         <p>
-          <span class="post_caption_user">michelepapagni </span
+          <span class="post_caption_user">{{ userNick }} </span
           ><span class="post_caption_text"
-            >Ciao a tutti, belli e brutti.
-            <span class="post_hashtags">#vivalavida #igers</span>
+            >{{ postText }}
+            <span class="post_hashtags"></span>
           </span>
         </p>
       </div>
+      <div class="post_comments_num" v-if="postComments.length > 3">
+        Mostra tutti i {{ postComments.length }} commenti
+      </div>
       <div class="post_comments">
-        <p>
-          <span class="post_comments_user">peppiniello </span
-          ><span
-            >Bellissimo paesaggio! Devo andarci prima o poi, non vedo l'ora di
-            partire! <span class="post_tag">@muccacarolina</span></span
-          >
+        <p v-for="index in 3" :key="index">
+          <span class="post_comments_user"
+            >{{ postComments[index].username }} </span
+          ><span>{{ postComments[index].text }}</span>
         </p>
       </div>
       <div class="post_time">
-        <p>26 giugno</p>
+        <p>{{ postDate }}</p>
       </div>
     </div>
     <div class="post_foot">
@@ -90,5 +91,17 @@
 <script>
 export default {
   name: 'Post',
+  props: [
+    'userNick',
+    'userFullName',
+    'userPic',
+    'postPic',
+    'postText',
+    'postDate',
+    'firstLikeName',
+    'firstLikePic',
+    'postLikes',
+    'postComments',
+  ],
 }
 </script>
