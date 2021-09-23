@@ -1,0 +1,11 @@
+footer {
+  height: 50px;
+  width: 100%;
+  @include flex_st_cen;
+}
+
+.foot_text {
+  color: $light-grey;
+  font-size: 11px;
+  text-transform: uppercase;
+}

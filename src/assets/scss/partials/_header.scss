@@ -1,6 +1,55 @@
 nav {
-  height: 60px;
+  height: 70px;
   width: 100%;
-  background: pink;
-  @include flex_cen;
+  background: #fff;
+  border-bottom: $content-border;
+}
+
+.nav_container {
+  @include flex_beet_cen;
+}
+
+.nav_logo {
+  height: 100%;
+  padding: 15px 0;
+}
+
+.nav_logo img {
+  height: 100%;
+}
+
+.nav_search input {
+  padding: 5px;
+  background: #f0f0f0;
+  border: none;
+  text-align: center;
+  width: 200px;
+}
+
+.nav_icons {
+  height: 100%;
+  padding: 15px 0;
+  @include flex_end_cen;
+}
+
+.nav_act {
+  margin-left: 15px;
+}
+
+.nav_prof_pic {
+  height: 23px;
+  width: 23px;
+  @include img_round_cont;
+  cursor: pointer;
+}
+
+.nav_prof_pic img {
+  @include cover_imgs;
+}
+
+@media screen and (max-width: 1000px) {
+  .nav_add,
+  .nav_comp {
+    display: none;
+  }
 }

@@ -1,41 +1,42 @@
 main {
-  height: calc(100vh - 60px);
+  height: 100%;
   width: 100%;
-  background: lightblue;
+  padding: 50px 0 70px;
+  background: $very-light-grey;
 }
 
 .main_sides_cont {
-  display: flex;
   height: 100%;
+  @include flex_cen_st;
 }
 
 .main_left {
-  height: 100%;
+  height: calc(100% - 40px);
   width: 600px;
   margin-right: 30px;
-  background: lightskyblue;
+  background: $very-light-grey;
 }
 
 .main_right {
-  flex-grow: 1;
-  background: teal;
+  padding-top: 25px;
+  width: 320px;
+  height: calc(100vh - 120px);
+  background: $very-light-grey;
+  @include flex_cen_beet;
 }
 
 .stories {
   height: 100px;
-  width: 600px;
-  background: rgba(0, 0, 0, 0.1);
+  width: 100%;
+  background: #fff;
   padding: 15px;
   display: flex;
-  margin-bottom: 20px;
-  overflow-x: scroll;
+  overflow: hidden;
+  margin-bottom: 30px;
+  border: $content-border;
 }
 
 .story {
-  width: 70px;
-  height: 70px;
-  border-radius: 100%;
-  background: rgba(0, 0, 0, 0.2);
   margin-right: 20px;
 }
 
@@ -43,14 +44,292 @@ main {
   margin-right: 0;
 }
 
+.story_pic {
+  width: 70px;
+  height: 70px;
+  @include img_round_cont;
+}
+
+.story_pic img {
+  @include cover_imgs;
+}
+
 .posts {
   height: 100%;
-  overflow-y: scroll;
 }
 
 .post {
   width: 100%;
-  height: 600px;
-  background: rgba(0, 0, 0, 0.3);
+  background: #fff;
   margin-bottom: 20px;
+  border: $content-border;
+}
+
+.post_head {
+  width: 100%;
+  height: 54px;
+  padding: 12px;
+  background: #fff;
+  @include flex_beet_cen;
+}
+
+.post_head i {
+  font-size: 18px;
+}
+
+.post_head_info {
+  height: 100%;
+  @include flex_st_cen;
+}
+
+.post_head_pic {
+  height: 30px;
+  width: 30px;
+  margin-right: 10px;
+  @include img_round_cont;
+}
+
+.post_head_pic img {
+  @include cover_imgs;
+}
+
+.post_head_prof {
+  font-size: 13px;
+  font-weight: 700;
+  color: $dark-grey;
+}
+
+.post_head_location {
+  font-size: 12px;
+  color: $light-grey;
+}
+
+.post_head_settings {
+  height: 30px;
+  width: 30px;
+  @include flex_cen_cen;
+}
+
+.post_head_settings p {
+  font-size: 24px;
+  font-weight: 700;
+  color: $dark-grey;
+}
+
+.post_pic {
+  width: 600px;
+  height: 600px;
+  overflow: hidden;
+}
+
+.post_pic img {
+  @include cover_imgs;
+}
+
+.post_main {
+  padding: 12px;
+  font-size: 14px;
+  border-bottom: $content-border;
+}
+.post_actions {
+  height: 25px;
+  width: 100%;
+  margin-bottom: 12px;
+  @include flex_beet_cen;
+}
+
+.post_act_left {
+  @include flex_st_cen;
+}
+
+.post_act_right {
+  width: 25px;
+  @include flex_cen_cen;
+}
+
+.post_act {
+  height: 100%;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.post_likes {
+  height: 22px;
+  width: 100%;
+  margin-bottom: 10px;
+  @include flex_st_cen;
+}
+
+.post_likes_pic {
+  height: 22px;
+  width: 22px;
+  margin-right: 8px;
+  @include img_round_cont;
+}
+
+.post_likes_pic img {
+  @include cover_imgs;
+}
+
+.post_caption {
+  margin-bottom: 10px;
+}
+
+.post_caption_user,
+.post_comments_user {
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.post_hashtags,
+.post_tag {
+  color: $hash-tags;
+  cursor: pointer;
+}
+
+.post_comments {
+  margin-bottom: 10px;
+}
+
+.post_time {
+  color: $light-grey;
+  text-transform: uppercase;
+  font-size: 11px;
+}
+
+.post_write {
+  height: 60px;
+  width: 100%;
+  @include flex_beet_cen;
+  padding: 15px;
+}
+
+.post_write > div {
+  margin-right: 20px;
+}
+
+.post_write > div:last-child {
+  margin-right: 0;
+}
+
+.post_write_msg {
+  flex-grow: 1;
+}
+
+.post_write_msg input {
+  width: 100%;
+  border: none;
+  padding: 5px;
+  color: $light-grey;
+}
+
+.profiles {
+  height: 60px;
+  width: 100%;
+  background: $very-light-grey;
+  @include flex_beet_cen;
+}
+
+.profs_content {
+  @include flex_st_cen;
+}
+
+.profs_pic {
+  height: 60px;
+  width: 60px;
+  margin-right: 15px;
+  @include img_round_cont;
+}
+
+.profs_pic img {
+  @include cover_imgs;
+}
+
+.profs_text {
+  text-align: left;
+}
+
+.profs_user {
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 3px;
+}
+
+.profs_name {
+  font-size: 14px;
+  color: $light-grey;
+}
+
+.suggested {
+  width: 100%;
+  height: calc(100% - 110px);
+}
+
+.sugg_head {
+  width: 100%;
+  @include flex_beet_cen;
+  margin: 20px 0;
+}
+
+.sugg_title {
+  font-weight: 700;
+  font-size: 14px;
+  color: $grey;
+}
+
+.profile {
+  width: 100%;
+  height: 50px;
+  padding: 10px 0;
+  @include flex_beet_cen;
+}
+
+.prof_content {
+  @include flex_st_cen;
+}
+
+.prof_pic {
+  height: 30px;
+  width: 30px;
+  @include img_round_cont;
+  margin-right: 10px;
+}
+
+.prof_pic img {
+  @include cover_imgs;
+}
+
+.prof_user {
+  font-weight: 700;
+  font-size: 13px;
+  margin-bottom: 3px;
+}
+
+.prof_fwers {
+  font-size: 12px;
+  color: $light-grey;
+}
+
+.click_foll,
+.sugg_show,
+.profs_swap,
+.post_write_publish p {
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.click_foll,
+.profs_swap,
+.post_write_publish p {
+  color: $act-color;
+}
+
+@media screen and (max-width: 1000px) {
+  .main_right {
+    display: none;
+  }
+  .main_left {
+    margin-right: 0;
+  }
 }
