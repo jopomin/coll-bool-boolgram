@@ -59,6 +59,16 @@ i:active {
 .skeleton {
   background: $skeleton-grey !important;
   border: none !important;
+  animation: skeleton-loading 1s linear infinite alternate;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.3;
+  }
 }
 
 .skeleton_nav {

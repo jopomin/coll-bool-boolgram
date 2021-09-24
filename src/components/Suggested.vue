@@ -33,7 +33,7 @@ export default {
         this.loading = false
         this.setLoadingSugg()
       })
-    }, 2000)
+    }, 5000)
   },
   methods: {
     setLoadingSugg() {
