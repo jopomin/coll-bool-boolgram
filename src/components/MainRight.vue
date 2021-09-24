@@ -1,7 +1,7 @@
 <template>
   <div class="main_right">
     <Usprof />
-    <Suggested />
+    <Suggested @setLoadingSugg="setLoadingMRight" />
     <Footer />
   </div>
 </template>
@@ -15,6 +15,11 @@ export default {
     Usprof,
     Suggested,
     Footer,
+  },
+  methods: {
+    setLoadingMRight(loadingMR) {
+      this.$emit('setLoadingMRight', loadingMR)
+    },
   },
 }
 </script>

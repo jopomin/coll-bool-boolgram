@@ -3,7 +3,7 @@
     <div class="main_container">
       <div class="main_sides_cont">
         <MainLeft />
-        <MainRight />
+        <MainRight @setLoadingMRight="setLoadingMain" />
       </div>
     </div>
   </main>
@@ -17,6 +17,11 @@ export default {
   components: {
     MainLeft,
     MainRight,
+  },
+  methods: {
+    setLoadingMain(loadingMain) {
+      this.$emit('setLoadingMain', loadingMain)
+    },
   },
 }
 </script>

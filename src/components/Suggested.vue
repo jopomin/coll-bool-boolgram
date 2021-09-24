@@ -23,12 +23,22 @@ export default {
   data() {
     return {
       suggested: [],
+      loading: false,
     }
   },
   mounted() {
-    this.axios.get(this.posts_url).then((result) => {
-      this.suggested = result.data
-    })
+    setTimeout(function () {
+      this.axios.get(this.posts_url).then((result) => {
+        this.suggested = result.data
+        this.loading = false
+        this.setLoadingSugg()
+      })
+    }, 4000)
+  },
+  methods: {
+    setLoadingSugg() {
+      this.$emit('setLoadingSugg', this.loading)
+    },
   },
 }
 </script>

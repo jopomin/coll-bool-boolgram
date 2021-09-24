@@ -14,14 +14,12 @@ main {
   height: calc(100% - 40px);
   width: 600px;
   margin-right: 30px;
-  background: $very-light-grey;
 }
 
 .main_right {
-  padding-top: 25px;
   width: 320px;
-  height: calc(100vh - 120px);
-  background: $very-light-grey;
+  margin-top: 20px;
+  height: calc(100vh - 140px);
   @include flex_cen_beet;
 }
 
@@ -82,6 +80,10 @@ main {
 .story_user {
   font-size: 13px;
   color: $dark-grey;
+}
+
+.posts {
+  min-height: calc(100vh - 255px);
 }
 
 .post {
@@ -267,7 +269,7 @@ main {
 .user_profile {
   height: 60px;
   width: 100%;
-  background: $very-light-grey;
+  margin-bottom: 25px;
   @include flex_beet_cen;
 }
 
@@ -303,7 +305,7 @@ main {
 
 .suggested {
   width: 100%;
-  height: calc(100% - 110px);
+  flex-grow: 1;
 }
 
 .sugg_head {

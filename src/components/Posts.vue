@@ -1,4 +1,5 @@
 <template>
+  <!-- se passato tramite prop, il savFlag viene applicato a tutti i Children. Come fare per passarlo solo al Child coinvolto nell'evento? -->
   <div class="posts">
     <Post
       v-for="(post, index) in posts"
@@ -41,13 +42,14 @@ export default {
   },
   methods: {
     saveThePost(postTBS, savedFlag, postImage) {
+      console.log(savedFlag, postImage)
       if (this.savedPosts.length > 0) {
         this.savedPosts.forEach((savpost) => {
           if (savpost.post_image === postImage && savedFlag == true) {
             this.savedPosts.splice(this.savedPosts.indexOf(savpost), 1)
             this.imageFlag.splice(this.imageFlag.indexOf(postImage), 1)
             this.savFlag = false
-          } else if (savedFlag == false) {
+          } else if (savpost.post_image === postImage && savedFlag == false) {
             this.savedPosts.push(postTBS)
             this.imageFlag.push(postImage)
             this.savFlag = true
