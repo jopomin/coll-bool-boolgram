@@ -7,8 +7,9 @@
     <Profile
       v-for="(sugg, index) in suggested"
       :key="index"
-      :pic="sugg.profile_picture"
+      :pic="sugg.post_image"
       :user="sugg.profile_name"
+      :likes="sugg.likes"
     />
   </div>
 </template>
@@ -25,9 +26,8 @@ export default {
     }
   },
   mounted() {
-    this.axios.get(this.stories_url).then((result) => {
+    this.axios.get(this.posts_url).then((result) => {
       this.suggested = result.data
-      console.log(this.suggested)
     })
   },
 }

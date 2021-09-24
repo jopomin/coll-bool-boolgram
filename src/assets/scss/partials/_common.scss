@@ -4,8 +4,9 @@
   height: 100%;
 }
 
-.hide {
-  display: none;
+.hide,
+.followed {
+  display: none !important;
 }
 
 i {
@@ -15,6 +16,10 @@ i {
 
 i:hover {
   color: $story-color;
+}
+
+i:active {
+  color: $story-color-active;
 }
 
 @media screen and (max-width: 1000px) {

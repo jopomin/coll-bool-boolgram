@@ -9,7 +9,7 @@
         <p class="usprof_name">Michele Papagni</p>
       </div>
     </div>
-    <div class="usprof_swap">
+    <div class="usprof_swap act_text">
       <p>Passa a</p>
     </div>
   </div>

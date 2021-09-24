@@ -179,6 +179,10 @@ main {
   cursor: pointer;
 }
 
+.red_heart {
+  color: #cc0d46;
+}
+
 .post_likes {
   height: 22px;
   width: 100%;
@@ -349,18 +353,14 @@ main {
   color: $light-grey;
 }
 
-.click_foll,
 .sugg_show,
-.usprof_swap,
-.post_write_publish p {
+.act_text {
   font-weight: 700;
   font-size: 13px;
   cursor: pointer;
 }
 
-.click_foll,
-.usprof_swap,
-.post_write_publish p {
+.act_text {
   color: $act-color;
 }
 
@@ -377,4 +377,14 @@ main {
 
 .post_comments_num:hover {
   color: $grey;
+}
+
+.act_text:hover {
+  color: $act-color-hover;
+}
+
+/* ACTIVE */
+
+.act_text:active {
+  color: $act-color-active;
 }
