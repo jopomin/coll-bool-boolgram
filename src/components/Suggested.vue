@@ -27,13 +27,13 @@ export default {
     }
   },
   mounted() {
-    setTimeout(function () {
+    setTimeout(() => {
       this.axios.get(this.posts_url).then((result) => {
         this.suggested = result.data
         this.loading = false
         this.setLoadingSugg()
       })
-    }, 4000)
+    }, 2000)
   },
   methods: {
     setLoadingSugg() {
