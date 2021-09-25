@@ -2,7 +2,7 @@
   <div class="skeleton_main_cont">
     <div class="skeleton_smaller_cont">
       <div class="spinner_container">
-        <div class="lds-spinner">
+        <!--         <div class="lds-spinner">
           <div></div>
           <div></div>
           <div></div>
@@ -15,7 +15,8 @@
           <div></div>
           <div></div>
           <div></div>
-        </div>
+        </div> -->
+        <div class="loader">Loading...</div>
       </div>
       <div class="skeleton_nav skeleton"></div>
       <div class="skeleton_main">

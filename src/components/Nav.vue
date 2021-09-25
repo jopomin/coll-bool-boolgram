@@ -24,7 +24,7 @@
           <i class="far fa-heart"></i>
         </div>
         <div class="nav_act nav_prof_pic">
-          <img src="../assets/img/profile.jpg" alt="" />
+          <img src="../assets/img/jopomin.jpg" alt="" />
         </div>
       </div>
     </div>
